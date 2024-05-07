@@ -37,7 +37,7 @@ function showAlarmList()
         newCardButton.classList.add("deleteButton");
         newCardButton.textContent="Delete";
         newCardButton.id="del"+i;
-        newCardButton.setAttribute("onclick","deleteMusic(i)");
+        newCardButton.setAttribute("onclick","deleteAlarm(i)");
         alarmdata.appendChild(newCardContent);
         alarmdata.appendChild(newCardButton);
 } 
@@ -46,7 +46,7 @@ function showAlarmList()
 
 
 
-function deleteMusic(id) {
+function deleteAlarm(id) {
     const buttonToDelete = document.getElementById("del"+id);
     const alarmToDelete = document.getElementById("alarm"+id);
     buttonToDelete.remove(); 
